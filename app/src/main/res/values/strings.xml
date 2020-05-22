@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">goConcert</string>
+    <string name="bandas_de_rock">Bandas de Rock</string>
+    <string name="belo_horizonte">Belo Horizonte</string>
+    <string name="banner_inicial">banner inicial</string>
+    <string name="imagem_da_banda">imagem da banda</string>
+    <string name="data">17/04/2021</string>
+    <string name="dia_hora">Sab - 21:00</string>
+    <string name="ingressos_disponiveis">Ainda temos ingressos disponíveis!!!</string>
 </resources>

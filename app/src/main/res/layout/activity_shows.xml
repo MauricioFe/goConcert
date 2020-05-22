@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ShowsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/shows_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/shows_imagem_banda"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:background="@color/cardview_dark_background"
+                android:contentDescription="@string/imagem_da_banda"
+                android:scaleType="matrix"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/scalene" />
+
+            <TextView
+                android:id="@+id/shows_nome_banda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/shows_imagem_banda"
+                app:layout_constraintEnd_toEndOf="@id/shows_imagem_banda"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/shows_imagem_banda"
+                app:layout_constraintTop_toTopOf="@id/shows_imagem_banda"
+                app:layout_constraintVertical_bias="0.89"
+                tools:text="Scalene" />
+
+            <View
+                android:id="@+id/shows_divider"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shows_imagem_banda" />
+
+            <TextView
+                android:id="@+id/shows_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/data"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/shows_local"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shows_imagem_banda" />
+
+            <TextView
+                android:id="@+id/shows_local"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="6dp"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/shows_data"
+                app:layout_constraintTop_toBottomOf="@+id/shows_divider"
+                tools:text="Pálacio das Artes" />
+
+            <TextView
+                android:id="@+id/shows_dia_hora"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/shows_preco"
+                app:layout_constraintStart_toStartOf="@+id/shows_data"
+                app:layout_constraintTop_toBottomOf="@+id/shows_data"
+                tools:text="@string/dia_hora" />
+
+            <TextView
+                android:id="@+id/shows_ingressos_disponiveis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/ingressos_disponiveis"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shows_preco" />
+
+            <TextView
+                android:id="@+id/shows_preco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/shows_dia_hora"
+                app:layout_constraintTop_toBottomOf="@+id/shows_local"
+                tools:text="R$ 49,90" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
