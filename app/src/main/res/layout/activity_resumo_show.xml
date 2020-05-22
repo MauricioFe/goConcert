@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ResumoShowActivity">
+
+    <ImageView
+        android:id="@+id/resumo_show_imagem"
+        android:layout_width="0dp"
+        android:layout_height="174dp"
+        android:contentDescription="@string/imagem_da_banda"
+        android:scaleType="matrix"
+        android:src="@drawable/scalene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/resumo_show_banda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_show_imagem"
+        tools:text="Scalene" />
+
+    <TextView
+        android:id="@+id/resumo_show_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/resumo_show_banda"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_show_banda"
+        tools:text="17/05/2021" />
+
+    <TextView
+        android:id="@+id/resumo_show_dia_hora"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/resumo_shor_local"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/resumo_show_data"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_show_banda"
+        tools:text="Sab - 21:00" />
+
+    <TextView
+        android:id="@+id/resumo_shor_local"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toEndOf="@+id/resumo_show_dia_hora"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_show_banda"
+        tools:text="Palacio das Artes" />
+
+    <TextView
+        android:id="@+id/resumo_local_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_show_data"
+        tools:text="R$ 49,90" />
+
+    <RadioButton
+        android:id="@+id/resumo_show_radio_camarote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="Camarote"
+        app:layout_constraintStart_toEndOf="@+id/resumo_show_radio_pista"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_shor_local" />
+
+    <RadioButton
+        android:id="@+id/resumo_show_radio_pista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="40dp"
+        android:checked="true"
+        android:clickable="true"
+        android:text="Pista"
+        app:layout_constraintStart_toEndOf="@+id/resumo_local_preco"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_shor_local" />
+
+    <Button
+        android:id="@+id/resumo_show_botao_realiza_pagamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/botao_redondo_azul"
+        android:text="Realizar pagamento"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
