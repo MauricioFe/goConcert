@@ -131,4 +131,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/conclusao_compra_preco"
         app:layout_constraintVertical_bias="0.217" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="202dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="528dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
